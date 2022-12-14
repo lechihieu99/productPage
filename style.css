@@ -1,0 +1,392 @@
+@font-face {
+    font-family: "Kum_Sans";
+    src: url("Kumbh_Sans/static/KumbhSans-Medium.ttf");
+}
+* {
+    font-family: "Kum_Sans";
+    font-size: 18px;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.web {
+    position: absolute;
+    width: 1366px;
+    height: 768px;
+    background-color: white;
+    left: calc(50% - 683px);
+    position: relative;
+}
+#lightbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 8, 70, 0.415);
+    top: 0;
+    left: 0;
+    z-index: 7;
+    display: none;
+}
+#iconClose {
+    transform: scale(2,2);
+    position: absolute;
+    top: 10%;
+    left: 70%;
+}
+#iconClose:hover {
+    cursor: pointer;
+    stroke: white;
+}
+.imgLightbox {
+    width: 456px;
+    height: 456px;
+    position: absolute;
+    top: calc(45% - 228px);
+    left: calc(50% - 228px);
+    background-size: cover;
+    border-radius: 15px;
+}
+.imgLightbox:hover {
+    cursor: pointer;
+}
+#otherImg {
+    width: 436px;
+    height: 90px;
+    position: absolute;
+    left: calc(50% - 218px);
+    top: calc(45% + 248px);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#imageLightbox:nth-child(1) {
+    border: solid 2px lightgoldenrodyellow;
+    filter: brightness(1.2);
+}
+#left {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    top: calc(45% - 20px);
+    left: calc(50% - 248px);
+    z-index: 6;
+}
+#right {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    z-index: 6;
+    top: calc(45% - 20px);
+    left: calc(50% + 208px);
+}
+#iconLeft {
+    stroke: #1D2026;
+}
+#iconRight {
+    stroke: #1D2026;
+}
+#left:hover , #right:hover {
+    cursor: pointer;
+}
+#iconLeft:hover , #iconRight:hover{
+    fill: orange;
+    stroke: orange;
+}
+.imgOther {
+    background-size: cover;
+    width: 23%;
+    height: 100%;
+    border-radius: 10px;
+}
+.imgOther:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+.container {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+.header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.logo {
+    width: 20%;
+}
+.menuBar {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.itemMenu:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+#basket {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 83%;
+}
+#cart {
+    width: 250px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left: -125px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 5;
+    display: none;
+}
+#iconCart:hover {
+    cursor: pointer;
+}
+#count {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    background-color: hsla(26, 100%, 61%, 0.752);
+    color: white;
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+.boxName {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-bottom: solid 1px hsl(223, 64%, 98%);
+}
+#note {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+#text {
+    transform: translateY(90px);
+}
+
+/* #jqueryProduct {
+    width: 100%;
+    background-color: red;
+    padding-top: 10px;
+}
+#productCart {
+    width: calc(100% - 20px);
+    height: fit-content;
+    padding-left: 10px;
+    display: grid;
+    grid: 40px / 40px auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.image {
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: aqua;
+    background-size: cover;
+}
+.infor {
+    grid-area: 1 / 2 / span 1 / span 1;
+    background-color: aqua;
+    display: grid;
+    grid: 50% 50% / 85% 15%;
+}
+.element1 {
+    padding-top: 2px;
+    width: 100%;
+    height: 50%;
+    font-size: smaller;
+}
+.element2 {
+    grid-area: 2 / 1 / span 1 /span 1;
+    font-size: 13px;
+}
+#delete {
+    padding-top: 10px;
+} */
+.buttonCart {
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    transform: translateX(65px);
+    display: none;
+}
+.buttonCart:hover {
+    cursor: pointer;
+    background-color: hsl(26, 84%, 41%);
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 90%;
+    top: 0;
+    border-radius: 20px;
+    background-image: url("images/image-avatar.png");
+    background-size: cover;
+}
+.avatar:hover {
+    cursor: pointer;
+    border: solid 1px orange;
+}
+.main-content {
+    position: absolute;
+    width: 85%;
+    height: 75%;
+    top: 15%;
+    left: 5%;
+    display: grid;
+    grid: 100% / 48% 45%;
+    gap: 7%;
+}
+.product {
+    display: grid;
+    grid: 407px auto / auto auto auto auto;
+    gap: 20px;
+}
+#pic1 {
+    background-image: url("images/image-product-1.jpg");
+    background-size: cover;
+    grid-area: 1 / 1 / span 1 / span 4;
+    border-radius: 15px;
+}
+#pic1:hover {
+    cursor: pointer;
+}
+#pic2 {
+    background-image: url("images/image-product-1-thumbnail.jpg");
+    background-size: cover;
+    grid-area: 2 / 1 / span 1 / span 1;
+    border-radius: 10px;
+}
+#pic3 {
+    background-image: url("images/image-product-2-thumbnail.jpg");
+    background-size: cover;
+    grid-area: 2 / 2 / span 1 / span 1;
+    border-radius: 10px;
+}
+#pic4 {
+    background-image: url("images/image-product-3-thumbnail.jpg");
+    background-size: cover;
+    grid-area: 2 / 3 / span 1 / span 1;
+    border-radius: 10px;
+}
+#pic5 {
+    background-image: url("images/image-product-4-thumbnail.jpg");
+    background-size: cover;
+    grid-area: 2 / 4 / span 1 / span 1;
+    border-radius: 10px;
+}
+#pic2:hover , #pic3:hover , #pic4:hover , #pic5:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+.companyName {
+    padding-top: 15%;
+    padding-bottom: 10px;
+    font-size: smaller;
+    font-weight: bold;
+    color: hsl(26, 100%, 55%)
+}
+#title {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.sub {
+    color: hsl(219, 9%, 45%);
+    font-size: smaller;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+.saleBox {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    align-items: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#valueSale {
+    padding-right: 20px;
+    font-size: 30px;
+}
+.salePercent {
+    font-weight: normal;
+    background-color: hsl(25, 100%, 94%);
+    width: 50px;
+    text-align: center;
+    color: hsl(26, 100%, 55%);
+}
+.originPrice {
+    padding-bottom: 30px;
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+}
+.shoppingBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+}
+.numberBox {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+}
+#buttonAdd {
+    width: 70%;
+    height: 100%;
+    padding-left: 10px;
+}
+#addCart {
+    width: 90%;
+    height: 100%;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#addCart:hover {
+    cursor: pointer;
+}
+#addCart:hover {
+    background-color: hsl(26, 96%, 62%);
+}
+#iconShopping {
+    padding-right: 5px;
+    stroke: white;
+    fill: white;
+}
+#minus:hover, #add:hover {
+    cursor: pointer;
+}
